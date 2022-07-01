@@ -1,16 +1,21 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-export default class Contact extends Component {
+interface IContact {
+  name: string,
+  email: string,
+  phone: string
+}
+
+export default class Contact extends Component<IContact> {
   render() {
     return (
       <div>
-        <h4>John Doe</h4>
+        <h4>{this.props.name}</h4>
         <ul>
-          <li>Email: john@gmail.com</li>
-          <li>Phone: (555) 555 5555</li>
+          <li>Email: {this.props.email}</li>
+          <li>Phone: {this.props.phone}</li>
         </ul>
       </div>
-    )
+    );
   }
 }
-

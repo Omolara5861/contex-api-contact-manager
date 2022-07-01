@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
-export function Header() {
+export function Header(props: any) {
   return (
     <div>
-            <h1>Contact Manager</h1>
+      <h1>{props.branding}</h1>
     </div>
-  )
+  );
 }
