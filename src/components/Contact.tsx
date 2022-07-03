@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types'
+import './contact.css';
+
 interface IContact {
   name: string,
   email: string,
