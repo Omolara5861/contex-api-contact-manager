@@ -5,7 +5,7 @@ export const Header =  (props: any) => {
   const { branding} = props;
   return (
     <div>
-      <h1>{branding}</h1>
+      <h1 style={{color: "purple", fontSize: '50px'}}>{branding}</h1>
     </div>
   );
 } 
