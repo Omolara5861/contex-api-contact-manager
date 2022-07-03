@@ -21,6 +21,6 @@ Header.propTypes = {
 
 // Style for the heading - This is a CSS style object
 const headingStyle = {
-  color: "green",
-  fontSize: '50px'
+  color: "purple",
+  fontSize: '40px'
 }
