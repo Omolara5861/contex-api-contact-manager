@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from 'prop-types'
 
 export const Header =  (props: any) => {
@@ -37,7 +36,7 @@ Header.propTypes = {
 }
 
 // Style for the heading - This is a CSS style object
-const headingStyle = {
-  color: "purple",
-  fontSize: '40px'
-}
+// const headingStyle = {
+//   color: "purple",
+//   fontSize: '40px'
+// }
