@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import PropTypes from 'prop-types'
 interface IContact {
   name: string,
   email: string,
@@ -7,6 +7,12 @@ interface IContact {
 }
 
 export default class Contact extends Component<IContact> {
+  static propTypes: { 
+    name: PropTypes.Validator<string>; 
+    email: PropTypes.Validator<string>; 
+    phone: PropTypes.Validator<string>; 
+  };
+
   render() {
     const {name, email, phone} = this.props;
     return (
@@ -19,4 +25,10 @@ export default class Contact extends Component<IContact> {
       </div>
     );
   }
+}
+
+Contact.propTypes = {
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired
 }
