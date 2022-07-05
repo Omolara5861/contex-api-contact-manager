@@ -15,8 +15,7 @@ export default class Contact extends Component<IContact> {
   };
 
 
-  onShowClicked(e: string){
-    console.log(e)
+  onShowClicked(){
   }
 
   render() {
@@ -24,7 +23,7 @@ export default class Contact extends Component<IContact> {
     return (
       <div className="card card-body mb-3">
         <h4>{name}
-        <i onClick={this.onShowClicked.bind(this, email)} className="fa-solid fa-sort-down"></i>
+        <i onClick={this.onShowClicked} className="fa-solid fa-sort-down"></i>
         </h4>
         <ul className="list-group">
           <li className="list-group-item">Email: {email}</li>
