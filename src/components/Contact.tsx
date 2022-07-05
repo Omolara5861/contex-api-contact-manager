@@ -30,10 +30,10 @@ export default class Contact extends Component<IContact> {
         <h4>{name}
         <i onClick={() => this.setState({showContactInfo: !this.state.showContactInfo})} className="fa-solid fa-sort-down"></i>
         </h4>
-        <ul className="list-group">
+        {this.state.showContactInfo ?<ul className="list-group">
           <li className="list-group-item">Email: {email}</li>
           <li className="list-group-item">Phone: {phone}</li>
-        </ul>
+        </ul> : null}
       </div>
     );
   }
