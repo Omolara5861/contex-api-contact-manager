@@ -30,7 +30,8 @@ export default class Contacts extends Component {
     const { contacts } = this.state;
     return <div>
         {contacts.map(contact => (
-            <Contact key={contact.id} name={contact.name} email={contact.email} phone={contact.phone}/>
+            <Contact key={contact.id}
+            name={contact.name} email={contact.email} phone={contact.phone}/>
         ))}
     </div>;
   }
