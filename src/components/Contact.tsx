@@ -19,16 +19,16 @@ export default class Contact extends Component<IContact> {
   }
 
   // Firstway to change the state of the component
-  onShowClicked = () => {
-    this.setState({showContactInfo: !this.state.showContactInfo})
-  }
+  // onShowClicked = () => {
+  //   this.setState({showContactInfo: !this.state.showContactInfo})
+  // }
 
   render() {
     const {name, email, phone} = this.props;
     return (
       <div className="card card-body mb-3">
         <h4>{name}
-        <i onClick={this.onShowClicked} className="fa-solid fa-sort-down"></i>
+        <i onClick={() => this.setState({showContactInfo: !this.state.showContactInfo})} className="fa-solid fa-sort-down"></i>
         </h4>
         <ul className="list-group">
           <li className="list-group-item">Email: {email}</li>
