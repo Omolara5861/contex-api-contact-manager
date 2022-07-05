@@ -14,8 +14,13 @@ export default class Contact extends Component<IContact> {
     phone: PropTypes.Validator<string>; 
   };
 
+  state = {
+    showContactInfo: true
+  }
 
-  onShowClicked(){
+  // Firstway to change the state of the component
+  onShowClicked = () => {
+    this.setState({showContactInfo: !this.state.showContactInfo})
   }
 
   render() {
