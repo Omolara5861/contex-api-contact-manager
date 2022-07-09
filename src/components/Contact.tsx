@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
 interface IContact {
   name: string,
   email: string,
-  phone: string
+  phone: string,
+  deleteClickHandler: () => void
 }
 
 export default class Contact extends Component<IContact> {
@@ -12,6 +13,7 @@ export default class Contact extends Component<IContact> {
     name: PropTypes.Validator<string>; 
     email: PropTypes.Validator<string>; 
     phone: PropTypes.Validator<string>; 
+    deleteClickHandler: PropTypes.Validator<() => void>;
   };
 
   state = {
@@ -23,6 +25,10 @@ export default class Contact extends Component<IContact> {
   //   this.setState({showContactInfo: !this.state.showContactInfo})
   // }
 
+  onDeleteClicked = () => {
+    this.props.deleteClickHandler(); 
+  }
+
   render() {
     const {name, email, phone} = this.props;
     return (
@@ -31,7 +37,7 @@ export default class Contact extends Component<IContact> {
         <i onClick={() => this.setState({showContactInfo: !this.state.showContactInfo})} className="fa-solid fa-sort-down" style={{cursor: 'pointer'}}></i>
         <i className="fa-solid fa-times"
             style={{float: 'right', color: 'red', cursor: 'pointer'}}
-            ></i>
+            onClick={this.onDeleteClicked}></i>
         </h4>
         {this.state.showContactInfo ?<ul className="list-group">
           <li className="list-group-item">Email: {email}</li>
@@ -45,5 +51,6 @@ export default class Contact extends Component<IContact> {
 Contact.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired
+  phone: PropTypes.string.isRequired,
+  deleteClickHandler: PropTypes.func.isRequired
 }
