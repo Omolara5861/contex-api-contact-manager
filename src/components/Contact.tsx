@@ -28,7 +28,10 @@ export default class Contact extends Component<IContact> {
     return (
       <div className="card card-body mb-3">
         <h4>{name}
-        <i onClick={() => this.setState({showContactInfo: !this.state.showContactInfo})} className="fa-solid fa-sort-down"></i>
+        <i onClick={() => this.setState({showContactInfo: !this.state.showContactInfo})} className="fa-solid fa-sort-down" style={{cursor: 'pointer'}}></i>
+        <i className="fa-solid fa-times"
+            style={{float: 'right', color: 'red', cursor: 'pointer'}}
+            ></i>
         </h4>
         {this.state.showContactInfo ?<ul className="list-group">
           <li className="list-group-item">Email: {email}</li>
