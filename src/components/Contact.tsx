@@ -26,6 +26,8 @@ export default class Contact extends Component<IContact> {
   // }
 
   onDeleteClicked = () => {
+    // changing state from another component07
+    
     this.props.deleteClickHandler(); 
   }
 
