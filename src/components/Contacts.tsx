@@ -8,7 +8,7 @@ export default class Contacts extends Component {
         const {contacts} = this.state;
 
         // Filter out the contact with the given id and return the new array of contacts without the deleted one
-        const newContacts = contacts.filter((contact: any) => contact.id !== id);
+        const newContacts = contacts.filter ((contact: any) => contact.id !== id);
 
         // setting contacts to newContacts without the deleted contact 
         this.setState({contacts: newContacts})
