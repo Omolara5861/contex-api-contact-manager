@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import  {Header} from './components/Header';
+import  {Header} from './components/layout/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Contacts from './components/Contacts';
-import { Provider } from './components/context';
+import Contacts from './components/contacts/Contacts';
+import { Provider } from './context';
 
 
 function App() {
