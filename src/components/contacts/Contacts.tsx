@@ -12,7 +12,7 @@ export default class Contacts extends Component {
           return  (
          <>
         {contacts.map((contact: any) => (
-            <Contact key={contact.id}
+            <Contact key={contact.id} 
             id={contact.id} name={contact.name} email={contact.email} phone={contact.phone}
             />
         ))}

@@ -25,8 +25,8 @@ export default class Contact extends Component<IContact> {
   //   this.setState({showContactInfo: !this.state.showContactInfo})
   // }
 
-  onDeleteClicked = (id: number, dispatch: any) => {    
-      dispatch({type: 'DELETE_CONTACT', payload: id})
+  onDeleteClicked = (id: number, dispatchEvent: any) => {    
+      dispatchEvent({type: 'DELETE_CONTACT', payload: id})
   }
 
   render() {
@@ -34,7 +34,7 @@ export default class Contact extends Component<IContact> {
     return (
       <Consumer>
         {value => {
-          const { dispatch} = value;
+          const { dispatchEvent} = value;
 
           return (
             <div className="card card-body mb-3">
@@ -42,7 +42,7 @@ export default class Contact extends Component<IContact> {
         <i onClick={() => this.setState({showContactInfo: !this.state.showContactInfo})} className="fa-solid fa-sort-down" style={{cursor: 'pointer'}}></i>
         <i className="fa-solid fa-times"
             style={{float: 'right', color: 'red', cursor: 'pointer'}}
-            onClick={this.onDeleteClicked.bind(this, id, dispatch)}></i>
+            onClick={this.onDeleteClicked.bind(this, id, dispatchEvent)}></i>
         </h4>
         {this.state.showContactInfo ?<ul className="list-group">
           <li className="list-group-item">Email: {email}</li>
