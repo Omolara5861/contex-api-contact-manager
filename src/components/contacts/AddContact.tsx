@@ -13,7 +13,7 @@ export default class AddContact extends Component {
     }
     onChange = (e: any) => this.setState({[e.target.name]: e.target.value});
     
-    onSubmit = (dispatchEvent:any, e: any) => {
+    onSubmit = async (dispatchEvent:any, e: any) => {
         e.preventDefault();
         
         const {name, email, phone} = this.state;
@@ -39,10 +39,9 @@ export default class AddContact extends Component {
             phone
         }
 
-        axios.post('https://jsonplaceholder.typicode.com/users', newContact)
-        .then(res => dispatchEvent({ type: 'ADD_CONTACT', payload: res.data }))
-        .catch(err => console.log(err));
-
+        const res = await axios.post('https://jsonplaceholder.typicode.com/users', newContact)
+        dispatchEvent({type: 'ADD_CONTACT', payload: res.data});
+        
         // Clear the form
         this.setState({
             name: '',
