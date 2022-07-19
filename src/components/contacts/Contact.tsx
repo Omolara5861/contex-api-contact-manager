@@ -17,7 +17,7 @@ export default class Contact extends Component<IContact> {
   };
 
   state = {
-    showContactInfo: true
+    showContactInfo: false
   }
 
   // Firstway to change the state of the component
