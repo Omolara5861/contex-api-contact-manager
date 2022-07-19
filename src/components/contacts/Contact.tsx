@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types'
 import { Consumer } from "../../context";
+import axios from 'axios';
 
 interface IContact {
   id: number,
@@ -25,8 +26,10 @@ export default class Contact extends Component<IContact> {
   //   this.setState({showContactInfo: !this.state.showContactInfo})
   // }
 
-  onDeleteClicked = (id: number, dispatchEvent: any) => {    
-      dispatchEvent({type: 'DELETE_CONTACT', payload: id})
+  onDeleteClicked = (id: number, dispatchEvent: any) => {   
+    axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`)
+    .then(response => response.data)
+    .then(data => dispatchEvent({ type: 'DELETE_CONTACT', payload: id }))
   }
 
   render() {
