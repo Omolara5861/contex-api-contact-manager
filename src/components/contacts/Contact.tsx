@@ -26,9 +26,10 @@ export default class Contact extends Component<IContact> {
   //   this.setState({showContactInfo: !this.state.showContactInfo})
   // }
 
-  onDeleteClicked = (id: number, dispatchEvent: any) => {   
-    axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`)
-    .then(res => dispatchEvent({ type: 'DELETE_CONTACT', payload: id }))
+  onDeleteClicked = async (id: number, dispatchEvent: any) => {   
+    await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
+
+    dispatchEvent({ type: 'DELETE_CONTACT', payload: id });
   }
 
   render() {
