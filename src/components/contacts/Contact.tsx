@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from 'prop-types'
 import { Consumer } from "../../context";
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 interface IContact {
   id: number,
@@ -46,6 +47,12 @@ export default class Contact extends Component<IContact> {
         <i className="fa-solid fa-times"
             style={{float: 'right', color: 'red', cursor: 'pointer'}}
             onClick={this.onDeleteClicked.bind(this, id, dispatchEvent)}></i>
+
+            <Link to={`contact/edit/${id}`}>
+            <i className="fa-solid fa-fa-pencil-alt"
+            style={{float: 'right', color: 'black',
+             cursor: 'pointer', marginRight: '1rem'}}></i>
+            </Link>
         </h4>
         {this.state.showContactInfo ?<ul className="list-group">
           <li className="list-group-item">Email: {email}</li>
