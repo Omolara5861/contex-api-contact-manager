@@ -7,6 +7,7 @@ import Contacts from './components/contacts/Contacts';
 import { Provider } from './context';
 import AddContact from './components/contacts/AddContact';
 import About from './components/pages/About';
+import NotFound from './components/pages/NotFound';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/" component={Contacts} />
         <Route path="/contact/add" component={AddContact} />
         <Route path="/about" component={About} />
+        <Route component={NotFound} />
       </Switch>
      </div>
     </div>
