@@ -11,6 +11,19 @@ export default class EditContact extends Component {
         errors: {}
     }
     onChange = (e: any) => this.setState({[e.target.name]: e.target.value});
+
+    async componentDidMount() {
+        const { id } = this.props.match.params;
+        const res = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`);
+
+        const contact = res.data;
+    
+        this.setState({
+            name: contact.name,
+            email: contact.email,
+            phone: contact.phone
+        });
+    }
     
     onSubmit = async (dispatchEvent:any, e: any) => {
         e.preventDefault();

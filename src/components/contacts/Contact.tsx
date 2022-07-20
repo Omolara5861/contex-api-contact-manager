@@ -49,7 +49,7 @@ export default class Contact extends Component<IContact> {
             onClick={this.onDeleteClicked.bind(this, id, dispatchEvent)}></i>
 
             <Link to={`contact/edit/${id}`}>
-            <i className="fa-solid fa-fa-pencil-alt"
+            <i className="fa-solid fa-pencil"
             style={{float: 'right', color: 'black',
              cursor: 'pointer', marginRight: '1rem'}}></i>
             </Link>
