@@ -43,15 +43,20 @@ export default class Contact extends Component<IContact> {
           return (
             <div className="card card-body mb-3">
         <h4>{name}
-        <i onClick={() => this.setState({showContactInfo: !this.state.showContactInfo})} className="fa-solid fa-sort-down" style={{cursor: 'pointer'}}></i>
-        <i className="fa-solid fa-times"
+        <i onClick={() => this.setState({showContactInfo: !this.state.showContactInfo})} className="fas fa-sort-down" style={{cursor: 'pointer'}}
+        title={this.state.showContactInfo ? 'close-details' : 'view-details'}>
+        </i>
+        <i className="fas fa-times"
             style={{float: 'right', color: 'red', cursor: 'pointer'}}
-            onClick={this.onDeleteClicked.bind(this, id, dispatchEvent)}></i>
+            onClick={this.onDeleteClicked.bind(this, id, dispatchEvent)}
+            title="delete"></i>
 
             <Link to={`contact/edit/${id}`}>
-            <i className="fa-solid fa-pencil"
+            <i className="fas fa-pencil-alt"
             style={{float: 'right', color: 'black',
-             cursor: 'pointer', marginRight: '1rem'}}></i>
+             cursor: 'pointer', marginRight: '1rem'}}
+             title="edit">
+             </i>
             </Link>
         </h4>
         {this.state.showContactInfo ?<ul className="list-group">
