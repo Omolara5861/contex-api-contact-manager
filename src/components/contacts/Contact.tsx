@@ -4,7 +4,7 @@ import { Consumer } from "../../context";
 import axios from 'axios';
 import { Link } from "react-router-dom";
 
-interface IContact {
+export interface IContact {
   id: number,
   name: string,
   email: string,
@@ -37,7 +37,7 @@ export default class Contact extends Component<IContact> {
     const {id, name, email, phone} = this.props;
     return (
       <Consumer>
-        {value => {
+        {(value: any) => {
           const { dispatchEvent} = value;
 
           return (

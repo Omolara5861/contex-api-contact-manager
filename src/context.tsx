@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 
-const Context = React.createContext();
+
+
+const Context = React.createContext({});
 
 const reducer = (state: any, action: any) => {
   switch (action.type) {
@@ -25,12 +27,11 @@ const reducer = (state: any, action: any) => {
   }
 }
 
-
-export class Provider extends Component {
+export class Provider extends Component<any, any> {
   state = {
     contacts: [],
     dispatchEvent: (action: any) => {
-      this.setState(state => reducer(state, action));
+      this.setState((state: any )=> reducer(state, action));
     }
 };
 

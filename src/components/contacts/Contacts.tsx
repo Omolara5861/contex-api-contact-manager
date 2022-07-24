@@ -7,7 +7,7 @@ export default class Contacts extends Component {
   render() {
     return (
       <Consumer>
-        {value => {
+        {(value: any) => {
           const { contacts } = value;
           return  (
          <>
