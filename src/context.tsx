@@ -27,7 +27,7 @@ const reducer = (state: any, action: any) => {
   }
 }
 
-export class Provider extends Component<any, any> {
+export class Provider extends Component<any> {
   state = {
     contacts: [],
     dispatchEvent: (action: any) => {

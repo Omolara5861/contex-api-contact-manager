@@ -3,7 +3,7 @@ import { Consumer } from '../../context';
 import TextInputGroup from '../layout/TextInputGroup';
 import axios from 'axios';
 
-export default class EditContact extends Component {
+export default class EditContact extends Component<any> {
     state = {
         name: '',
         email: '',
@@ -71,7 +71,7 @@ export default class EditContact extends Component {
     const { name, email, phone, errors } = this.state;
     return (
     <Consumer>
-        {value => {
+        {(value: any) => {
             const {dispatchEvent} = value;
         return(
       <div className='card mb-3'>
@@ -92,7 +92,7 @@ export default class EditContact extends Component {
                 name='email'
                 placeholder='Enter Email...'
                 value={email}
-                typee='email'
+                type='email'
                 onChange={this.onChange}
                 error={errors.email}>
                 </TextInputGroup>
