@@ -67,4 +67,3 @@ return (
 function useState(arg0: { email: string; name: string; phone: string }): [any, any] {
   throw new Error('Function not implemented.')
 }
-
