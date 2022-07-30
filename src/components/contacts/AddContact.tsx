@@ -9,7 +9,11 @@ export default class AddContact extends Component<any> {
         name: "",
         email: "",
         phone: "",
-        errors: {},
+        errors: {
+            name: '',
+            email: '',
+            phone: ''
+        },
 };
     onChange = (e: any) => this.setState({ [e.target.name]: e.target.value });
 

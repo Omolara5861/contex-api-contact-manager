@@ -1,66 +1,72 @@
-import React, { Component } from 'react';
+import React, { useRef } from "react";
 
-export default class AddContact extends Component {
-    
-    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
-    constructor(props: any) {
-        super(props);
-        this.nameInput = React.createRef();
-        this.emailInput = React.createRef();
-        this.phoneInput = React.createRef();
-    }
-    
-    onSubmit = (e: any) => {
-        e.preventDefault();
-        const contact = {
-            name: this.nameInput.current.value,
-            email: this.emailInput.current.value,
-            phone: this.phoneInput.current.value
-        }
-        console.log(contact);
-      }
-    static defaultProps = {
-        name: 'Kennie',
-        email: 'kennie@gmail.com',
-        phone: '999-999-9999'
-    }
-  render() {
-    const { name, email, phone } = this.props;
+export default function AddContact_Ref() {
+  const nameRef = useRef<HTMLInputElement>();
+  const emailRef = useRef<HTMLInputElement>();
+  const phoneRef = useRef<HTMLInputElement>();
+
+  const defaultProps = {
+    name: "redd",
+    email: "redd@bloxflip.com",
+    phone: "10329832",
+  };
+
+  const handleSubmit = (e: any) => {
+    try {
+      e.preventDefault();
+      const finalObject = {
+        name: nameRef.current.value,
+        email: emailRef.current.value,
+        phone: phoneRef.current.value,
+      };
+      console.log(finalObject);
+    } catch (err) {}
+  }
     return (
-      <div className='card mb-3'>
-        <div className='card-header'>Add Contact</div>
-        <div className='card-body'>
-            <form onSubmit={this.onSubmit}>
-                <div className='form-group'>
-                    <label htmlFor='name'>Name</label>
-                    <input type='text' name='name' className='form-control form-control-lg' 
-                    placeholder='Enter Name....'
-                    defaultValue={name}
-                   ref={this.nameInput }
-                    />
-                </div>
+      <div className="card mb-3">
+        <div className="card-header">Add Contact</div>
+        <div className="card-body">
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="name">Name</label>
+              <input
+                ref={nameRef}
+                type="text"
+                name="name"
+                defaultValue={defaultProps.name}
+                className="form-control form-control-lg"
+                placeholder="Enter Name...."
+              />
+            </div>
 
-                <div className='form-group'>
-                    <label htmlFor='email'>Email</label>
-                    <input type='email' name='email' className='form-control form-control-lg' 
-                    placeholder='Enter Email....'
-                    defaultValue={email}
-                    ref={this.emailInput}
-                    />
-                </div>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                ref={emailRef}
+                type="email"
+                name="email"
+                defaultValue={defaultProps.email}
+                className="form-control form-control-lg"
+                placeholder="Enter Email...."
+              />
+            </div>
 
-                <div className='form-group'>
-                    <label htmlFor='phone'>Phone</label>
-                    <input type='tel' name='phone' className='form-control form-control-lg' 
-                    placeholder='Enter Phone....'
-                    defaultValue={phone}
-                    ref={this.phoneInput}
-                    />
-                </div>
-                <input type="submit" value="Add Contact" className="btn btn-light btn-block" />
-            </form>
+            <div className="form-group">
+              <label htmlFor="phone">Phone</label>
+              <input
+                ref={phoneRef}
+                type="tel"
+                name="phone"
+                defaultValue={defaultProps.phone}
+                className="form-control form-control-lg"
+                placeholder="Enter Phone...."
+              />
+            </div>
+            <button className="btn btn-light btn-block" type="submit">
+              Add Contact
+            </button>
+          </form>
         </div>
       </div>
     );
-}
-}
+  };

@@ -8,7 +8,11 @@ export default class EditContact extends Component<any> {
         name: '',
         email: '',
         phone: '',
-        errors: {}
+        errors: {
+            name: '',
+            email: '',
+            phone: ''
+        }
     }
     onChange = (e: any) => this.setState({[e.target.name]: e.target.value});
 
@@ -79,32 +83,32 @@ export default class EditContact extends Component<any> {
         <div className='card-body'>
             <form onSubmit={this.onSubmit.bind(this, dispatchEvent)}>
                 <TextInputGroup
-                label='Name'
-                name='name'
-                placeholder='Enter Name...'
-                value={name}
-                onChange={this.onChange}
-                error={errors.name}>
-                </TextInputGroup>
+                    label="Name"
+                    name="name"
+                    placeholder="Enter Name..."
+                    value={name}
+                    onChange={this.onChange}
+                    error={errors.name}
+                ></TextInputGroup>
                 
                 <TextInputGroup
-                label='Email'
-                name='email'
-                placeholder='Enter Email...'
-                value={email}
-                type='email'
-                onChange={this.onChange}
-                error={errors.email}>
-                </TextInputGroup>
+                    label="Email"
+                    name="email"
+                    placeholder="Enter Email..."
+                    value={email}
+                    type="email"
+                    onChange={this.onChange}
+                    error={errors.email}
+                ></TextInputGroup>
 
                 <TextInputGroup
-                label='Phone'
-                name='phone'
-                placeholder='Enter Phone...'
-                value={phone}
-                onChange={this.onChange}
-                error={errors.phone}>
-                </TextInputGroup>
+                    label="Phone"
+                    name="phone"
+                    placeholder="Enter Phone..."
+                    value={phone}
+                    onChange={this.onChange}
+                    error={errors.phone}
+                ></TextInputGroup>
 
                 <input type="submit" value="Update Contact" className="btn btn-light btn-block" />
             </form>
