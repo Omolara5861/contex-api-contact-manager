@@ -2,7 +2,7 @@
   "name": "context-api-contact-manager",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://omolara5861.github.io/",
+  "homepage": "https://omolara5861.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -14,6 +14,7 @@
     "axios": "^0.27.2",
     "bootstrap": "^4.1.2",
     "classnames": "^2.3.1",
+    "gh-pages": "^4.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^4.3.1",
