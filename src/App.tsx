@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import  {Header} from './components/layout/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,7 +15,7 @@ import AddContact_Ref from './components/contacts/AddContact_Ref';
 function App() {
   return (
     <Provider>
-      <Router>
+      <Router basename='context-api-contact-manager'>
       <div className="App">
      <Header branding="Contact Manager"/>
      <div className="container">

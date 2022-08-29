@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/context-api-contact-manager/static/css/main.a4bf2d42.css",
-    "main.js": "/context-api-contact-manager/static/js/main.ba2ff062.js",
+    "main.js": "/context-api-contact-manager/static/js/main.b7bcbab6.js",
     "static/js/787.acadafa6.chunk.js": "/context-api-contact-manager/static/js/787.acadafa6.chunk.js",
     "index.html": "/context-api-contact-manager/index.html",
     "main.a4bf2d42.css.map": "/context-api-contact-manager/static/css/main.a4bf2d42.css.map",
-    "main.ba2ff062.js.map": "/context-api-contact-manager/static/js/main.ba2ff062.js.map",
+    "main.b7bcbab6.js.map": "/context-api-contact-manager/static/js/main.b7bcbab6.js.map",
     "787.acadafa6.chunk.js.map": "/context-api-contact-manager/static/js/787.acadafa6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a4bf2d42.css",
-    "static/js/main.ba2ff062.js"
+    "static/js/main.b7bcbab6.js"
   ]
 }
