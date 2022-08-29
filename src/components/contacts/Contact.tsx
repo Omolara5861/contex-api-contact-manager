@@ -63,6 +63,7 @@ export default class Contact extends Component<IContact> {
           <li className="list-group-item">Email: {email}</li>
           <li className="list-group-item">Phone: {phone}</li>
         </ul> : null}
+        <h4>Testing if Build Works!</h4>
       </div>
           )
         }}
