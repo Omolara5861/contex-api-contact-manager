@@ -14,7 +14,7 @@ import AddContact_Ref from "./components/contacts/AddContact_Ref";
 function App() {
   return (
     <Provider>
-      <BrowserRouter basename="context-api-contact-manager">
+      <BrowserRouter>
         <div className="App">
           <Header branding="Contact Manager" />
           <div className="container">
