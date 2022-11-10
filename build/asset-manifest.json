@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/context-api-contact-manager/static/css/main.a4bf2d42.css",
-    "main.js": "/context-api-contact-manager/static/js/main.5b05b8ad.js",
-    "static/js/787.acadafa6.chunk.js": "/context-api-contact-manager/static/js/787.acadafa6.chunk.js",
-    "index.html": "/context-api-contact-manager/index.html",
-    "main.a4bf2d42.css.map": "/context-api-contact-manager/static/css/main.a4bf2d42.css.map",
-    "main.5b05b8ad.js.map": "/context-api-contact-manager/static/js/main.5b05b8ad.js.map",
-    "787.acadafa6.chunk.js.map": "/context-api-contact-manager/static/js/787.acadafa6.chunk.js.map"
+    "main.css": "/contex-api-contact-manager/static/css/main.a4bf2d42.css",
+    "main.js": "/contex-api-contact-manager/static/js/main.3ac7cb8a.js",
+    "static/js/787.c4b3cf2c.chunk.js": "/contex-api-contact-manager/static/js/787.c4b3cf2c.chunk.js",
+    "index.html": "/contex-api-contact-manager/index.html",
+    "main.a4bf2d42.css.map": "/contex-api-contact-manager/static/css/main.a4bf2d42.css.map",
+    "main.3ac7cb8a.js.map": "/contex-api-contact-manager/static/js/main.3ac7cb8a.js.map",
+    "787.c4b3cf2c.chunk.js.map": "/contex-api-contact-manager/static/js/787.c4b3cf2c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a4bf2d42.css",
-    "static/js/main.5b05b8ad.js"
+    "static/js/main.3ac7cb8a.js"
   ]
 }
