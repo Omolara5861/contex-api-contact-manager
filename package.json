@@ -1,8 +1,8 @@
 {
-  "name": "context-api-contact-manager",
+  "name": "contex-api-contact-manager",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://omolara5861.github.io/context-api-contact-manager",
+  "private": false,
+  "homepage": "https://omolara5861.github.io/contex-api-contact-manager",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",

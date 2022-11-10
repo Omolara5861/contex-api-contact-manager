@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { Header } from "./components/layout/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -14,7 +14,7 @@ import AddContact_Ref from "./components/contacts/AddContact_Ref";
 function App() {
   return (
     <Provider>
-      <BrowserRouter>
+      <Router basename="/contex-api-contact-manager">
         <div className="App">
           <Header branding="Contact Manager" />
           <div className="container">
@@ -28,7 +28,7 @@ function App() {
             </Switch>
           </div>
         </div>
-      </BrowserRouter>
+      </Router>
     </Provider>
   );
 }
