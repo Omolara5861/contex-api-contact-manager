@@ -8,7 +8,6 @@ import { Provider } from "./context";
 import EditContact from "./components/contacts/EditContact";
 import About from "./components/pages/About";
 import NotFound from "./components/pages/NotFound";
-import Test from "./components/test/Test";
 import AddContact_Ref from "./components/contacts/AddContact_Ref";
 
 function App() {
@@ -23,7 +22,6 @@ function App() {
               <Route path="/contact/add" component={AddContact_Ref} />
               <Route path="/contact/edit/:id" component={EditContact} />
               <Route path="/about" component={About} />
-              <Route path="/test" component={Test} />
               <Route component={NotFound} />
             </Switch>
           </div>
