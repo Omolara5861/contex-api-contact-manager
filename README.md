@@ -17,3 +17,16 @@ To install and run the application, follow these steps:
 4. Run ``npm start` to start the development server
 5. Open `http://localhost:3000` in your browser to view the application
 
+## Technologies Used
+The contact manager application was built using the following technologies:
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+
+![React Context API](https://img.shields.io/badge/react-context-api-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+
+![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+- Axios
+- JSONPlaceholder (REST API)
