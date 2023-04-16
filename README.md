@@ -21,13 +21,9 @@ To install and run the application, follow these steps:
 The contact manager application was built using the following technologies:
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-
 ![React Context API](https://img.shields.io/badge/react_context_api-FB542B.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
-
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 - Axios
